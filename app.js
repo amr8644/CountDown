@@ -1,7 +1,8 @@
 /*jshint esversion: 6 */
 
 const items = document.querySelectorAll(".deadline-format h4");
-const futureDate = new Date(2022, 1, 1);
+const futureDate = new Date(2022, 0, 01);
+console.log(futureDate);
 
 const remainingTime = () => {
   const date = new Date().getTime();
