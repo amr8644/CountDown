@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 
 const items = document.querySelectorAll(".deadline-format h4");
+const deadline = document.querySelector(".deadline");
 const futureDate = new Date(2022, 0, 01);
 console.log(futureDate);
 
@@ -27,8 +28,24 @@ const remainingTime = () => {
   };
 
   items.forEach((item, index) => {
-    item.innerHTML = values[index];
+    item.innerHTML = format(values[index]);
   });
+  if (time < 0) {
+    clearInterval(countDown);
+    deadline.innerHTML = `<h1>
+    <img
+      src="https://img.icons8.com/color/2x/confetti.png"
+      alt=""
+    />
+    HAPPY NEW YEAR!!!
+    <img
+      src="https://img.icons8.com/color/2x/confetti.png"
+      alt=""
+    />
+  </h1>`;
+  }
 };
 
 let countDown = setInterval(remainingTime, 1000);
+
+remainingTime();

@@ -58,6 +58,14 @@ body {
   align-items: center;
   justify-content: space-around;
 }
+.deadline h1 {
+  color: var(--white);
+}
+.deadline h1 img {
+  background: transparent;
+  width: 25px;
+  height: 25px;
+}
 
 .hill img {
   height: 100%;
