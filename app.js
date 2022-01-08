@@ -2,7 +2,7 @@
 
 const items = document.querySelectorAll(".deadline-format h4");
 const deadline = document.querySelector(".deadline");
-const futureDate = new Date(2022, 0, 01);
+const futureDate = new Date(2023, 0, 01);
 console.log(futureDate);
 
 const remainingTime = () => {
